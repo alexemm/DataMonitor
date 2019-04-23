@@ -10,7 +10,7 @@ class NormalPlot:
         self.y = args[1]
 
     def visualize(self):
-        plt.plt(self.x, self.y)
+        plt.plot(self.x, self.y)
 
 
 # todo
