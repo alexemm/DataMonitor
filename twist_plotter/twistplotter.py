@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-import utils.plot_kinds as Plotter
+from utils.plot_kinds import kinds
 
 
 class Plot:
@@ -11,7 +11,7 @@ class Plot:
         self.kwargs = kwargs
 
     def visualize(self, filename='', show=True):
-        plotter = Plotter.kinds[self.kind](*self.args, **self.kwargs)
+        plotter = kinds[self.kind](*self.args, **self.kwargs)
         plotter.visualize()
         if filename != '':
             plt.savefig(filename)
